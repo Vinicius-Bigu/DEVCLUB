@@ -1,0 +1,250 @@
+/* Remove margens e paddings padrão para evitar espaçamentos inconsistentes */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Importante para controlar tamanhos com padding e border */
+}
+
+/* Estiliza o corpo da página: fonte, cor, espaçamento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    /* cor clara de fundo */
+    color: #333;
+    /* cor do texto */
+    line-height: 1.6;
+    /* espaçamento entre linhas para facilitar a leitura */
+    padding: 20px;
+}
+
+/* Centraliza o conteúdo do header e adiciona margem inferior */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estiliza o título principal */
+header h1 {
+    font-size: 2.5rem;
+    /* aumenta o tamanho da fonte */
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* Define tamanho máximo e centraliza a imagem */
+header .logo {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    /* bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* sombra suave */
+}
+
+/* Remove os marcadores da lista e deixa o menu horizontal */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    gap: 20px;
+    /* espaçamento entre os itens */
+    margin-bottom: 20px;
+}
+
+/* Estiliza os links do menu */
+nav ul li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover nos links */
+nav ul li a:hover {
+    background-color: blue;
+}
+
+/* Remove os marcadores da lista e deixa o menu horizontal */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    gap: 20px;
+    /* espaçamento entre os itens */
+    margin-bottom: 20px;
+}
+
+/* Estiliza os links do menu */
+nav ul li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover nos links */
+nav ul li a:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+
+/* Formulário de login */
+nav form {
+    max-width: 300px;
+    /* Largura máxima para o formulário */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    text-align: left;
+    /* Texto alinhado à esquerda */
+    background-color: #ecf0f1;
+    /* Fundo claro para destacar o formulário */
+    padding: 15px;
+    /* Espaçamento interno */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+}
+
+/* Labels do formulário */
+nav form label {
+    display: block;
+    /* Faz o label ocupar uma linha inteira */
+    margin-bottom: 5px;
+    /* Espaço abaixo do label */
+    font-weight: bold;
+    /* Negrito para destaque */
+    color: #34495e;
+    /* Cor escura e suave */
+}
+
+/* Inputs do formulário */
+nav form input {
+    width: 100%;
+    /* Ocupa toda a largura do formulário */
+    padding: 8px;
+    /* Espaçamento interno */
+    margin-bottom: 15px;
+    /* Espaço abaixo do input */
+    border: 1px solid #bdc3c7;
+    /* Borda cinza clara */
+    border-radius: 4px;
+    /* Bordas levemente arredondadas */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+}
+
+/* Botões do formulário */
+nav form button {
+    padding: 8px 15px;
+    /* Espaçamento interno dos botões */
+    margin-right: 10px;
+    /* Espaço entre os botões */
+    border: none;
+    /* Remove borda padrão */
+    border-radius: 4px;
+    /* Bordas arredondadas */
+    background-color: #2980b9;
+    /* Cor azul */
+    color: white;
+    /* Texto branco */
+    font-weight: bold;
+    /* Negrito */
+    cursor: pointer;
+    /* Cursor de mão para indicar clicável */
+    transition: background-color 0.3s ease;
+    /* Transição suave */
+}
+
+nav form button:hover {
+    background-color: #1c5980;
+    /* Azul mais escuro ao passar o mouse */
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 600px;
+    /* Largura máxima para o conteúdo principal */
+    margin: 0 auto 40px auto;
+    /* Centraliza horizontalmente e dá margem inferior */
+    background-color: white;
+    /* Fundo branco */
+    padding: 20px;
+    /* Espaçamento interno */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+}
+
+/* Título e parágrafo do artigo */
+main article h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+main article p {
+    margin-bottom: 20px;
+}
+
+/* Labels no formulário */
+main form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Inputs e textarea */
+main form input,
+main form textarea {
+    width: 100%;
+    /* Ocupa toda a largura possível */
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Botões do formulário */
+main form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #27ae60;
+    /* Verde */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botão reset com cor diferente */
+main form button[type="reset"] {
+    background-color: #c0392b;
+    /* Vermelho */
+    margin-left: 10px;
+}
+
+main form button:hover {
+    opacity: 0.9;
+    /* Leve efeito ao passar o mouse */
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}

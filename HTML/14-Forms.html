@@ -1,0 +1,24 @@
+<!-- FORMS 
+        - capturar dados de entrada
+        - input -> Entrada
+
+        -Action -> Define a URL para onde os dados do formulário serão enviados, vazio significa que os dados serão enviados para a mesma página.
+        -Method -> Define o método HTTP para enviar os dados, geralmente "GET" ou "POST". GET anexa os dados à URL, enquanto POST os envia no corpo da requisição.
+-->
+
+<form action="" method="post" enctype="multipart/form-data">
+    <h1>Formulário de Contato</h1>
+    <label>
+        Nome:
+        <input type="text" name="nome" required>
+    </label>
+    <label>
+        Email:
+        <input type="email" name="email" required>
+    </label>
+    <label>
+        Telefone:
+        <input type="tel" name="telefone" required>
+    </label>
+    <button type="submit">Enviar</button>
+</form>

@@ -1,0 +1,56 @@
+/*
+    UNIDADES DE MEDIDAS
+
+    -> ABSOLUTAS
+        PX - PIXEL
+        CM - CENTÍMETRO
+        MM - MILÍMETRO
+        IN - POLEGADA
+
+    -> RELATIVAS
+        % - CAUCULA O TAMANHORELATIVO AO ELEMENTO PAI
+        EM - RELATIVO AO ELEMENTO PAI
+        REM - RELATIVO AO ELEMENTO RAIZ (HTML)
+        VW - RELATIVO A LARGURA DA TELA
+        VH - RELATIVO A ALTURA DA TELA
+
+        HEIGHT - ALTURA
+        WIDTH - LARGURA
+*/
+
+/* ID SELECTORS*/
+/*
+#title {
+    color: red;
+    font-size: 55px;
+}
+
+#paragraph {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#button1 {
+    background: green;
+    border-color: darkgreen;
+    cursor: pointer;
+}
+
+#button2 {
+    background: pink;
+    border-color: darkpink;
+    cursor: pointer;
+}
+*/
+/* CLASS SELECTORS */
+.text {
+    color: red;
+    font-weight: bold;
+}
+
+.button {
+    background: green;
+    border-color: darkgreen;
+    cursor: pointer;
+}
