@@ -12,7 +12,7 @@ querySelectorAll -> Trás todos os elementos que encontrar
 */
 
 const input = document.getElementsByName("nome-completo")[0]
-const elements = document.getElementsByClassName("paragraph-js")
+const input = document.getElementsByClassName("paragraph-js")
 
 console.log(input)
 console.log(elements)
