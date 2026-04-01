@@ -1,0 +1,274 @@
+/* styles.css */
+
+/* 1. Reset básico */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Facilita o controle de tamanhos */
+}
+
+/* 2. Estilos base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* fundo preto escuro */
+  color: #e0e0e0; /* texto cinza claro */
+  line-height: 1.6;
+}
+
+/* Links padrão */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 3. Cabeçalho */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* espaça os itens entre as extremidades */
+  padding: 20px 40px;
+  background-color: #1f1f1f; /* tom escuro para header */
+  color: #e0e0e0;
+  flex-wrap: wrap; /* para responsividade */
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header .logo {  /*imagem do logo*/
+  height: 50px;
+  margin-left: 20px;
+  object-fit: contain;
+} 
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #4caf50; /* verde suave no hover */
+}
+
+/* 4. Seção Intro */
+#intro {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+#intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#intro h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+#intro p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+#intro button {
+  background-color: #4caf50; /* botão verde */
+  border: none;
+  color: #121212; /* texto escuro para contraste */
+  padding: 12px 25px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#intro button:hover {
+  background-color: #388e3c; /* verde mais escuro no hover */
+}
+
+/* 5. Seções Projetos e Toolkit */
+#projetos, #toolkit {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+#projetos h2, #toolkit h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+#projetos p, #toolkit p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #bbb;
+}
+
+/* Grid para projetos */
+#projetos .projetos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+#projetos .projetos-lista .projeto {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 20px;
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  transition: transform 0.3s;
+}
+
+#projetos .projetos-lista .projeto:hover {
+  transform: translateY(-5px);
+}
+
+/* 6. Formulário de contato */
+#contato {
+  background-color: #1f1f1f;
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+  color: #e0e0e0;
+}
+
+#contato article h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+#contato article p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #bbb;
+}
+
+#contato label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #cfcfcf;
+}
+
+#contato input, #contato textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background-color: #121212;
+  color: #e0e0e0;
+  border: 1px solid #4caf50;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+#contato input:focus, #contato textarea:focus {
+  border-color: #81c784;
+  outline: none;
+}
+
+/* Centraliza o botão enviar dentro do formulário */
+#contato form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#contato button[type="submit"] {
+  background-color: #4caf50;
+  color: #121212;
+  border: none;
+  padding: 12px 40px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#contato button[type="submit"]:hover {
+  background-color: #388e3c;
+}
+
+/* 7. Rodapé */
+footer {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: #4caf50;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #81c784;
+}
+
+/* 8. Responsividade simples */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  #intro h2 {
+    font-size: 2rem;
+  }
+
+  #intro h3 {
+    font-size: 1.2rem;
+  }
+
+  #intro p {
+    font-size: 1rem;
+  }
+}
