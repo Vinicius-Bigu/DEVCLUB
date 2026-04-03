@@ -15,21 +15,28 @@
 
 <body>
     <header>
-        <img src="./../../../img/logo.gif" alt="Logo-convert-money" class="logo-principal" />
+        <h1>CONVERSOR DE MOEDAS</h1>
     </header>
     <main>
         <label>
             Converter <b>de</b>
-            <select>
-                <option>R$ Real Brasileiro</option>
+            <select class="currency-select2">
+                <option value ="real">R$ Real Brasileiro</option>
+                <option value ="dolar">US$ Dólar Americano</option>
+                <option value ="libra">£ Libra</option>
+                <option value ="bitcoin">₿ Bitcoin</option>
+                <option value ="euro">€ Euro</option>
             </select>
         </label>
 
         <label>
             Converter <b>para</b>
-            <select class="currency-select" id="currency-select">
-                <option value="dolar">US$ Dólar Americano</option>
-                <option value="euro">€ Euro</option>
+            <select class="currency-select">
+                <option value ="dolar">US$ Dólar Americano</option>
+                <option value ="euro">€ Euro</option>
+                <option value ="real">R$ Real Brasileiro</option>
+                <option value ="libra">£ Libra</option>
+                <option value ="bitcoin">₿ Bitcoin</option>
             </select>
         </label>
         Valor
@@ -39,16 +46,16 @@
 
         <section>
             <div class="currency-box">
-                <img src="./../../../img/brasil 2.png" alt="logo-moeda-a-converter" />
-                <p class="currency">Real</p>
+                <img class="currency-img2" src="./../../../img/Real.png" alt="logo-moeda-a-converter" />
+                <p class="currency" id="currency-name-convert">Real Brasileiro</p>
                 <p class="currency-value-to-convert">R$ 0,00</p>
             </div>
 
             <img class="arrow-img" src="./../../../img/Vector@2x.png" alt="arrow" />
 
             <div class="currency-box">
-                <img src="./../../../img/estados-unidos (1) 1.png" alt="logo-moeda-convertida" />
-                <p class="currency">Dólar</p>
+                <img class="currency-img" src="./../../../img/Dolar.png" alt="logo-moeda-convertida" />
+                <p class="currency" id="currency-name-converted">Dólar</p>
                 <p class="currency-value">US$ 0,00</p>
             </div>
         </section>

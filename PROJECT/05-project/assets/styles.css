@@ -6,31 +6,39 @@
 }
 
 body {
-    background: #8C52FD;
+    background: #E5E5E5;
 
 }
 
-.logo-principal {
-    width: 300px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin: 20px auto;
+h1 {
+   padding: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 29px;
+    text-align: center;
+    color: #772fd3;
+    text-shadow: 0px 4px 4px rgba(119, 47, 211, 0.50);
+  
+   
 }
 
 main {
-        width: 375px;
-       background: #F4F4F4;
-       border-radius: 20px;
-       margin:0 auto;
-       padding: 44px 24px 23px;       
+    width: 375px;
+    background: #F4F4F4;
+    border-radius: 20px;
+    margin:0 auto;
+    padding: 44px 24px 23px; 
+    border: 1px solid #772fd3      
 }
 
 label {
     color: #777777;
     font-weight: 400;
     font-size: 14px;
+    margin: auto;
+    
 }
 
 select , input {

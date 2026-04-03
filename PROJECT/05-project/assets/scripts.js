@@ -1,52 +1,88 @@
-const convertButton = document.querySelector(".convert-button")
-const currencySelect = document.querySelector(".currency-select")
+const convertButton = document.querySelector(".convert-button");
+const currencySelectFrom = document.querySelector(".currency-select2"); // moeda de origem
+const currencySelectTo = document.querySelector(".currency-select"); // moeda destino
 
+const exchangeRates = {
+  real: 1,
+  dolar: 5.2,
+  euro: 6.2,
+  libra: 6.9,
+  bitcoin: 100000,
+};
 
+const currencyFormats = {
+  real: { locale: "pt-BR", currency: "BRL" },
+  dolar: { locale: "en-US", currency: "USD" },
+  euro: { locale: "de-DE", currency: "EUR" },
+  libra: { locale: "en-GB", currency: "GBP" },
+  bitcoin: { locale: "en-US", currency: "BTC" },
+};
 
-function trocarBandeira() {
-    const select = document.getElementById('moeda');
-    const imagem = document.getElementById('bandeira');
+const currencyNames = {
+  real: "Real Brasileiro",
+  dolar: "Dólar Americano",
+  euro: "Euro",
+  libra: "Libra",
+  bitcoin: "Bitcoin",
+};
 
-    if (select.value === 'dolar') {
-        imagem.src = './../../../img/estados-unidos (1) 1.png';
-    } else if (select.value === 'euro') {
-        imagem.src = './../../../img/Design sem nome 3.png';
-    }
-}
+const currencyImages = {
+  real: "./../../../img/Real.png",
+  dolar: "./../../../img/Dolar.png",
+  euro: "./../../../img/Euro.png",
+  libra: "./../../../img/Libra.png",
+  bitcoin: "./../../../img/Bitcoin.png",
+};
 
-function convertValues() {
-    const inputCurrencyValue = document.querySelector(".input-currency").value
-    const currencyValueToConvert = document.querySelector(".currency-value-to-convert") //valor em real
-    const currencyValueConverted = document.querySelector(".currency-value")
-    
-    const dolarToday = 5.2
-    const euroToday = 6.2
+const updateCurrencyDisplay = (currency, nameId, imgSelector, valueSelector, amount = 0) => {
+  const currencyName = document.getElementById(nameId);
+  const currencyImage = document.querySelector(imgSelector);
+  const valueElement = document.querySelector(valueSelector);
 
-    
-    if (currencySelect.value == "dolar"){
-        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD"
-    }).format(inputCurrencyValue / dolarToday)
+  currencyName.innerHTML = currencyNames[currency];
+  currencyImage.src = currencyImages[currency];
 
+  valueElement.innerHTML = new Intl.NumberFormat(
+    currencyFormats[currency].locale,
+    { style: "currency", currency: currencyFormats[currency].currency }
+  ).format(amount);
+};
 
-    }
-    if (currencySelect.value == "euro") {
-        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", {
-            style: "currency",
-            currency: "EUR"
-        }).format(inputCurrencyValue / euroToday)
-        
-    }
-   
+const convertAmount = (amount, fromCurrency, toCurrency) => {
+  const amountInReal = amount * exchangeRates[fromCurrency];
+  return amountInReal / exchangeRates[toCurrency];
+};
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(inputCurrencyValue)
+const convertAll = () => {
+  const inputAmount = Number(document.querySelector(".input-currency").value);
+  const fromCurrency = currencySelectFrom.value;
+  const toCurrency = currencySelectTo.value;
 
-   
+  if (isNaN(inputAmount) || inputAmount <= 0) {
+    alert("Por favor, insira um valor válido.");
+    return;
+  }
 
-}
-convertButton.addEventListener("click", convertValues)
+  const convertedAmount = convertAmount(inputAmount, fromCurrency, toCurrency);
 
+  // Atualiza moeda de origem (valor digitado)
+  updateCurrencyDisplay(fromCurrency, "currency-name-convert", ".currency-img2", ".currency-value-to-convert", inputAmount);
+
+  // Atualiza moeda destino (valor convertido)
+  updateCurrencyDisplay(toCurrency, "currency-name-converted", ".currency-img", ".currency-value", convertedAmount);
+};
+
+// Atualiza displays ao mudar selects, com valor zero
+currencySelectFrom.addEventListener("change", () => {
+  updateCurrencyDisplay(currencySelectFrom.value, "currency-name-convert", ".currency-img2", ".currency-value-to-convert", 0);
+});
+
+currencySelectTo.addEventListener("change", () => {
+  updateCurrencyDisplay(currencySelectTo.value, "currency-name-converted", ".currency-img", ".currency-value", 0);
+});
+
+convertButton.addEventListener("click", convertAll);
+
+// Inicializa displays com valores padrão (zero)
+updateCurrencyDisplay(currencySelectFrom.value, "currency-name-convert", ".currency-img2", ".currency-value-to-convert", 0);
+updateCurrencyDisplay(currencySelectTo.value, "currency-name-converted", ".currency-img", ".currency-value", 0);
