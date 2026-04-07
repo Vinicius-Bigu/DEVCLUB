@@ -1,6 +1,6 @@
 /*
 
-            Match -> Matemática
+     <------------Match -> Matemática------------>
 
 - pow (2,2) / potência / 2² = 4
 - sqrt (25,2) / raiz quadrada 
@@ -10,7 +10,7 @@
 - Random () / Aleatório
 
 
-            Operadores Aritméticos
+     <------------Operadores Aritméticos---------->
 
 + -> Adição
 - -> Subtração
@@ -22,7 +22,7 @@
 ** -> Exponencial 
     
    
-            Operadores de Comparação
+    <------------Operadores de Comparação----------->
 
 == -> Igual //Compara o valor, mas não o tipo
 === -> TOTALMENTE igual // compraa o VALOR e o TIPO
@@ -34,6 +34,35 @@
 < -> Menor
 >= -> Maior ou igual
 <= -> Menor ou igual
+
+
+     <------------Operadores Lógicos------------>
+
+&& -> AND -> E sempre que os dois operandos forem verdadeiros, o resultado será verdadeiro.
+            true && true = true
+            true && false = false 
+            false && false = false
+
+|| -> OR -> OU se um dos operandos for verdadeiro, o resultado será verdadeiro
+            true || true = true
+            true || false = true
+            false || false = false
+
+! -> NOT -> NÃO 
+            !true = false
+            !false = true
+
+typeof -> Retorna o tipo de dado
+
+delete -> Remove um item do objeto
+
+
+<------------------operadores ternários------------------>
+
+
+
+
+
 
 
 */
