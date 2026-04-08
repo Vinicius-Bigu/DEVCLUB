@@ -6,21 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Super Mario Bros</title>
 </head>
 
 <body>
-    <img src="./../../img/mario-bros.png" alt="Logo Mario Bros">
 
+    <div class="banner-video">
+        <video autoplay loop muted src="./../../Video/mario.mp4" type="video/mp4"> </video>
+        <div class="mascara-video"></div>
+    </div>
+
+    <div class="caixa-principal">
+    <img src="./../../img/mario-bros.png" alt="logo-mario-bros">
     <p>Encanadores Mario & Luigi - Resolvendo Seus Problemas Com Estilo!</p>
-
     <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos ou
         torneiras que não param de pingar? Não se preocupe, proque estamos aqui para salvar o dia! Apresentamos a vocês
         os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
-
-    <button>ENTRE EM CONTATO</button>
+    <button onclick="cliqueiNoBotao()">ENTRE EM CONTATO</button>
+    </div>
 
     <img src="./../../img/mario-luigi.png" alt="mario-luigi">
+
+    <form class="fale-conosco" action="https://formsubmit.co/bomag61297@rdluxe.com" method="POST">
+        <input placeholder="Seu nome" type="text" name="nome">
+        <input placeholder="Seu telefone" type="tel" name="telefone">
+        <textarea name="Digite seu Problema aqui" name="informacao"></textarea>
+        <button onclick="sumirFormulario()">Enviar Formulário</button>
+    </form>
+
+    <div class="mascara-form"></div>
+
+    <script src="script.js"></script>
 
 
 </body>
