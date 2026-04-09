@@ -27,4 +27,5 @@ const result = 2--
 
 ** -> Exponencial
 const result = 2 ** 2
+
 */
