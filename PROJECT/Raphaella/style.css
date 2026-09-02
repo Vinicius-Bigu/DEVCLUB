@@ -1,0 +1,390 @@
+/* Estilos Globais e Reset Básico */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte mais moderna */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 0; /* Remove o padding padrão do navegador */
+    background-color: #f8f9fa; /* Um fundo cinza claro para a página */
+    color: #343a40; /* Cor de texto padrão */
+}
+
+/* Estilo para links em geral */
+a {
+    color: #007bff; /* Azul padrão para links */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilos para o Cabeçalho Global */
+header {
+    background-color: #343a40; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+    padding: 1rem 0; /* Padding superior e inferior, 0 nas laterais */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+header h1 {
+    margin: 0; /* Remove a margem padrão do h1 */
+    font-size: 2.5rem; /* Tamanho da fonte maior */
+    color: #28a745; /* Cor verde para o nome dela */
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #ced4da; /* Um cinza claro para o subtítulo */
+}
+
+/* Estilos para a Navegação (Menu) */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: flex; /* Faz os itens ficarem lado a lado */
+    justify-content: center; /* Centraliza os itens */
+    gap: 1.5rem; /* Espaçamento entre os itens da lista */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+nav ul li a {
+    color: #ffffff; /* Texto branco para os links do menu */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 0.5rem 1rem; /* Padding interno para os links */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+nav ul li a:hover {
+    background-color: #28a745; /* Fundo verde ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado, já que temos um fundo */
+}
+
+/* Estilos para o Conteúdo Principal */
+main {
+    max-width: 960px; /* Largura máxima do conteúdo */
+    margin: 2rem auto; /* 2rem de margem superior/inferior, centraliza horizontalmente */
+    padding: 1.5rem; /* Padding interno */
+    background-color: #ffffff; /* Fundo branco para o conteúdo principal */
+    box-shadow: 0 0 15px rgba(0,0,0,0.05); /* Sombra mais pronunciada */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilos para as Seções */
+section {
+    padding: 2rem 0; /* Padding superior e inferior para espaçar as seções */
+    border-bottom: 1px solid #e9ecef; /* Linha divisória entre seções */
+}
+
+section:last-of-type {
+    border-bottom: none; /* Remove a linha da última seção */
+}
+
+section h2 {
+    color: #007bff; /* Azul para os títulos de seção */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Estilos para a Seção Hero (Início) */
+.hero-section {
+    text-align: center;
+    background-color: #e2f0d9; /* Um verde bem claro */
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero-section h2 {
+    font-size: 2.8rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #495057;
+}
+
+.button-cta {
+    display: inline-block; /* Permite definir padding e margin */
+    background-color: #28a745; /* Fundo verde vibrante */
+    color: #ffffff; /* Texto branco */
+    padding: 1rem 2rem; /* Padding generoso */
+    border-radius: 50px; /* Bordas bem arredondadas (botão "pílula") */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+}
+
+.button-cta:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+    transform: translateY(-3px); /* Leve efeito de "saltar" */
+    text-decoration: none;
+}
+
+/* Estilos para a Seção Sobre Mim */
+#sobre-mim figure {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#sobre-mim img {
+    width: 250px; /* Define uma largura fixa para a imagem */
+    height: 250px; /* Define uma altura fixa para a imagem */
+    border-radius: 50%; /* Transforma a imagem em um círculo */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    border: 5px solid #28a745; /* Borda verde na imagem */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para destacar */
+}
+
+#sobre-mim figcaption {
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 0.8rem;
+}
+
+#sobre-mim p {
+    text-align: justify; /* Justifica o texto para melhor leitura */
+    margin-bottom: 1rem;
+}
+
+/* Estilos para a Seção Serviços */
+#servicos ul {
+    list-style: none;
+    padding: 0;
+    display: grid; /* Usa Grid para layout de cartões de serviço */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas */
+    gap: 1.5rem; /* Espaçamento entre os cartões */
+}
+
+#servicos ul li {
+    background-color: #e9f7ef; /* Fundo verde claro para cada serviço */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#servicos ul li:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+}
+
+#servicos ul li h3 {
+    color: #28a745;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+#servicos ul li p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Estilos para a Seção Depoimentos */
+#depoimentos article {
+    background-color: #f1f8ff; /* Fundo azul claro para depoimentos */
+    padding: 1.5rem;
+    border-left: 5px solid #007bff; /* Borda lateral azul */
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#depoimentos blockquote p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 0.8rem;
+}
+
+#depoimentos cite {
+    display: block; /* Faz o nome do autor ir para a próxima linha */
+    text-align: right;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 1rem;
+}
+
+/* Estilos para a Seção Contato */
+#contato form {
+    max-width: 500px;
+    margin: 0 auto 2rem auto; /* Centraliza o formulário */
+    display: flex;
+    flex-direction: column; /* Itens um abaixo do outro */
+    gap: 1rem; /* Espaçamento entre os campos */
+}
+
+#contato form div {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+#contato input[type="text"],
+#contato input[type="email"],
+#contato input[type="tel"],
+#contato textarea {
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+#contato textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+#contato button[type="submit"] {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease;
+    align-self: center; /* Centraliza o botão dentro do flex container */
+    width: auto; /* Ajusta a largura ao conteúdo */
+}
+
+#contato button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+#contato ul { /* Estilizando os links de redes sociais no contato */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+#contato ul li a {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+#contato ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a Barra Lateral (Aside) */
+aside {
+    background-color: #fff3cd; /* Fundo amarelo claro */
+    border-left: 5px solid #ffc107; /* Borda amarela */
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+aside h3 {
+    color: #ffc107; /* Amarelo para o título */
+    margin-top: 0;
+    text-align: center;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+aside ul li a {
+    background-color: #ffc107;
+    color: #343a40;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+aside ul li a:hover {
+    background-color: #e0a800;
+}
+
+aside p {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Estilos para o Rodapé Global */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem; /* Espaçamento superior */
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    color: #ced4da;
+}
+
+/* Media Queries para Responsividade (Básico) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section h2 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    #servicos ul {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    nav ul {
+        flex-direction: column; /* Links do menu em coluna */
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .button-cta {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

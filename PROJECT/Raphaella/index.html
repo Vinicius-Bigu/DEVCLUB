@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissional de Educação Física | Raphaella da Silveira | Personal Trainer & Consultoria</title>
+    <meta name="description" content="Raphaella da Silveira, profissional de Educação Física e Personal Trainer. Ofereço treinos personalizados, consultoria esportiva e bem-estar.">
+    <!-- CONEXÃO COM O CSS - PREPARANDO PARA ESTILIZAÇÃO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--1. CABEÇALHO GLOBAL DA PÁGINA-->
+    <header>
+        <nav>
+            <!-- A tag <nav> é para links de navegação principais -->
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>    
+        </nav>
+        <h1>Raphaella da Silveira | Personal Trainer & Consultoria</h1>
+        <p>Sua parceira em sáude, bem-estar e performance física.</p>
+    </header>
+
+    <!--2. CONTEÚDO PRINCIPAL DA PÁGINA-->
+    <main>
+        <section id="inicio" class="hero-section">
+            <!-- Conteúdo de destaque inicial, como uma imagem grande ou frase de impacto -->
+            <h2>Transforme seu corpo e sua mente com treinos personalizados!</h2>
+            <p>Com Raphaella da Silveira, você alcança seus objetivos de forma saudável e sustentável.</p>
+            <a href="#contato" class="button-cta">Agende sua Consultoria Gratuita!</a>
+        </section>
+        
+        <!-- SEÇÃO: SOBRE MIM -->
+        <section id="sobre-mim">
+            <h2>Sobre Raphaella da Silveira</h2>
+            <figure>
+                <img src="./img/Raphaella.jpg" alt="Raphaella da Silveira - Personal Trainer sorrindo e com roupas esportivas" width="300">
+                <figcaption>Olá! Sou Raphaella da Silveira, sua Personal Trainer.</figcaption>
+            </figure>
+            <p>Olá! Meu nome é Raphaella da Silveira e sou uma profissional apaixonada por Educação Física, recém-formada e pronta para te ajudar a alcançar seus objetivos de saúde e bem-estar.</p>
+            <p>Minha jornada começou com a crença de que o movimento transforma vidas. Com foco em treinos personalizados e acompanhamento individualizado, busco oferecer uma experiência que vai além do exercício, promovendo hábitos saudáveis e resultados duradouros.</p>
+            <p>Seja para emagrecimento, ganho de massa muscular, melhora da performance esportiva ou reabilitação, estou aqui para montar um plano que se encaixe perfeitamente em suas necessidades e rotina.</p>
+        </section>
+
+        <!-- SEÇÃO: SERVIÇOS -->
+        <section id="servicos">
+            <h2>Meus Serviços</h2>
+            <p>Ofereço uma variedade de serviços para atender às suas metas:</p>
+            <ul>
+                <li>
+                    <h3>Personal Trainer Online e Presencial</h3>
+                    <p>Treinos individualizados, com acompanhamento e suporte contínuo para você atingir seus resultados.</p>
+                </li>
+                <li>
+                    <h3>Consultoria Esportiva</h3>
+                    <p>Orientação para atletas e entusiastas que buscam otimizar sua performance e superar limites.</p>
+                </li>
+                <li>
+                    <h3>Programas de Treinamento Personalizado</h3>
+                    <p>Planos de treino adaptados à sua rotina, equipamentos disponíveis e objetivos específicos.</p>
+                </li>
+                <li>
+                    <h3>Aulas em Grupo (Funcional, Hiit)</h3>
+                    <p>Sessões energéticas e motivadoras para você treinar em grupo e se divertir.</p>
+                </li>
+            </ul>
+        </section>
+
+                <!-- SEÇÃO: DEPOIMENTOS -->
+        <section id="depoimentos">
+            <h2>O que meus alunos dizem</h2>
+            <article> <!-- Usamos <article> para cada depoimento, pois é um conteúdo independente -->
+                <blockquote>
+                    <p>"A Raphaella transformou minha rotina! Os treinos são desafiadores, mas super adaptados às minhas necessidades. Perdi 5kg em 2 meses e estou com muito mais energia. Recomendo demais!"</p>
+                    <cite>- Ana Paula, Aluna de Personal Training</cite>
+                </blockquote>
+            </article>
+            <article>
+                <blockquote>
+                    <p>"Sempre tive dificuldade em manter a consistência nos treinos, mas com o acompanhamento da Raphaella, consegui criar um hábito. Ela é muito atenciosa e motivadora!"</p>
+                    <cite>- Carlos Eduardo, Aluno de Consultoria Online</cite>
+                </blockquote>
+            </article>
+            <!-- Você pode adicionar mais depoimentos aqui -->
+        </section>
+
+                <!-- SEÇÃO: CONTATO -->
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma dúvida, quer agendar uma consultoria ou começar seu treino personalizado? Preencha o formulário abaixo ou me encontre nas redes sociais!</p>
+
+            <form id="whatsappForm">  <!-- action="whatsappForm" significa que o formulário será enviado para o whatsapp -->
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome aqui">
+                </div>
+                <div>
+                    <label for="email">Seu Melhor E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="email@exemplo.com">
+                </div>
+                <div>
+                    <label for="telefone">Telefone (opcional):</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                </div>
+                <div>
+                    <label for="mensagem">Sua Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Gostaria de saber mais sobre..."></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar Mensagem</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- SEÇÃO ASIDE - BARRA LATERAL (Poderia ser um CTA, Links Rápidos, etc.) -->
+         <aside>
+            <h3>Ou me siga nas redes sociais:</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/raphaelladasilveira/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/raphaelladasilveira/" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p>Receba dicas diárias de treino e bem-estar!</p>
+        </aside>
+
+    </main>
+    <!-- RODAPÉ GLOBAL DA PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Raphaella da Silveira. Todos os direitos reservados.</p>
+        <p>Desenvolvido com ❤️ para a comunidade DevClub.</p>
+
+    </footer>
+<script src="script.js"></script> 
+</body>
+</html>
